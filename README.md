@@ -30,11 +30,13 @@ There will eventually be controls for how glyphs are rendered, but they are not 
 6. Check the glyph against an existing Register of glyphs that have already been created, to ensure uniqueness 
   *  Rotations and permutations can also be checked, in theory - see below for limitations  
 7. Repeat steps 1-6 until either the glyph is fully valid and unique, or the maximum number of samples has been reached 
+8. _Optional_ - If the maximum number of samples has been reached on this frame, flag the glyph for additional processing on the next frame. Repeat until the glyph is fully valid and unique
 
 For performance reasons, there are several sampling limiters that are applied to make sure things run smoothly:
 * The maximum number of attempts to roll a valid direction is limited
 * The maximum number of iterations (complete attempts to step through and close a glyph) is limited
 * The maximum number of glyphs that can process at once is limited
+
 All of these limits are user-adjustable, allowing for performance to be tweaked at runtime to suit various machines.
 
 ---
