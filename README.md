@@ -1,5 +1,7 @@
 # Processing Generative Glyph System
 
+![alt text](/Glyph_Creation_Sys/Screenshots/Glyph_Creation_Sys_10169.png "Example Output")
+
 A simple tool to procedurally generate a system of glyphs through a brute-force pathfinding algorithm that marches a grid of points. The end result is one or many glyph characters in vector format. Eventually, I plan to use this tool to create a language system for an in-progress game project.
 
 There are several options that influence how the glyphs are generated:
