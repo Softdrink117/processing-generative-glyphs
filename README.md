@@ -2,7 +2,7 @@
 
 ![alt text](/Glyph_Creation_Sys/Screenshots/Glyph_Creation_Sys_10169.png "Example Output")
 
-A simple tool to procedurally generate a system of glyphs through a brute-force pathfinding algorithm that marches a grid of points. The end result is one or many glyph characters in vector format. Eventually, I plan to use this tool to create a language system for an in-progress game project.
+A simple tool to procedurally generate a system of glyphs through a brute-force pathfinding algorithm that marches a grid of points. The concept is similar to the [Marching Squares algorithm](https://en.wikipedia.org/wiki/Marching_squares), but the actual implementation is quite different. The end result is one or many glyph characters in vector format. Eventually, I plan to use this tool to create a language system for an in-progress game project.
 
 There are several options that influence how the glyphs are generated:
 * Chance of diagonal movement can be controlled
@@ -43,6 +43,7 @@ All of these limits are user-adjustable, allowing for performance to be tweaked 
 
 **TODO:**
 * Further optimization of glyph algorithm
+* Parallelize it - there is no logical dependency between different Glyphs, and I don't believe they use any thread-unsafe terms, so it should be trivial to make the algorithm run in parallel
 * Account for all rotations (90 and 270 degree are still not accounted for in current implementation)
 * Try to account for subtle variations that result in identical visual results (IE do checks by area, or somesuch)
 * Add rendering options
